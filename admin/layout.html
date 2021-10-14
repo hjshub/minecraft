@@ -1,0 +1,325 @@
+<!DOCTYPE html> 
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>관리자 레이아웃</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+KR" rel="stylesheet">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+	</head>
+	<body>	
+		<div id="wrap">
+			<div id="container">
+				<div class="contents">
+					<div class="board_list">
+						<form action="/" method="">
+							<div class="search_area">
+								<div class="btnArea">
+									<button type="button" class="button">선택노출</button>
+									<button type="button" class="button">선택비노출</button>
+									<button type="button" class="button">엑셀 다운로드</button>
+								</div>
+								<ul>
+									<li>
+										<select>
+											<option value="">전체</option>
+											<option value="">이름</option>
+											<option value="">휴대폰 번호</option>
+										</select>
+									</li>
+									<li><input type="text" class=""><button type="submit" class="button_searh">검색</button></li>
+								</ul>
+							</div>
+							<div class="table_type01">
+								<table cellspacing='0' cellpadding='0' border="0">
+									<colgroup>
+										<col style="width:6%;" />
+										<col style="width:6%;" />
+										<col style="width:13%;" />
+										<col style="width:13%;" />
+										<col style="width:13%;" />
+										<col style="width:6%;" />
+										<col style="width:13%;" />
+										<col style="width:14%;" />
+										<col style="width:auto;" />
+										<col style="width:6%;" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th class="check_info first" scope="col" rowspan="2">
+												<span>
+													<input id="chk_All" type="checkbox" name="All" value="" onclick="checkedOn(this,'All');">
+													<label for="chk_All"></label>
+												</span>
+											</th>
+											<th scope="col" rowspan="2">번호</th>
+											<th scope="col" rowspan="2">응모자 이름</th>
+											<th scope="col" rowspan="2">응모자 휴대폰 번호</th>
+											<th scope="col" colspan="3" class="thin">법정대리인</th>
+											<th scope="col" rowspan="2">응모 날짜</th>
+											<th scope="col" rowspan="2">이미지</th>
+											<th scope="col" rowspan="2">노출 여부</th>
+										</tr>
+										<tr>
+											<th scope="col">이름</th>
+											<th scope="col">관계</th>
+											<th scope="col">휴대폰 번호</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="check_info first">
+												<span>
+													<input id="chk_0" type="checkbox" name="chk[00]" value="">
+													<label for="chk_0"></label>
+												</span>										
+											</td>
+											<td>10</td>
+											<td>홍길동</td>
+											<td>010-0000-0000</td>
+											<td>홍말순</td>
+											<td>모</td>
+											<td>010-1111-1111</td>
+											<td>2020.07.20 00:00:00</td>
+											<td><a class="thumNail" href="javascript:void(0);"><img src="https://dummyimage.com/60x60/000/fff" alt="이미지 미리보기" /></a></td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td class="check_info first">
+												<span>
+													<input id="chk_1" type="checkbox" name="chk[01]" value="">
+													<label for="chk_1"></label>
+												</span>												
+											</td>
+											<td>9</td>
+											<td>홍길동</td>
+											<td>010-0000-0000</td>
+											<td>홍말순</td>
+											<td>모</td>
+											<td>010-1111-1111</td>
+											<td>20.07.20 00:00:00</td>
+											<td><a class="thumNail" href="javascript:void(0);"><img src="https://dummyimage.com/60x60/000/fff" alt="이미지 미리보기" /></a></td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td class="check_info first">
+												<span>
+													<input id="chk_2" type="checkbox" name="chk[02]" value="">
+													<label for="chk_2"></label>
+												</span>													
+											</td>
+											<td>8</td>
+											<td>홍길동</td>
+											<td>010-0000-0000</td>
+											<td>홍말순</td>
+											<td>모</td>
+											<td>010-1111-1111</td>
+											<td>20.07.20 00:00:00</td>
+											<td><a class="thumNail" href="javascript:void(0);"><img src="https://dummyimage.com/60x60/000/fff" alt="이미지 미리보기" /></a></td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td class="check_info first">
+												<span>
+													<input id="chk_3" type="checkbox" name="chk[03]" value="">
+													<label for="chk_3"></label>
+												</span>												
+											</td>
+											<td>7</td>
+											<td>홍길동</td>
+											<td>010-0000-0000</td>
+											<td>홍말순</td>
+											<td>모</td>
+											<td>010-1111-1111</td>
+											<td>20.07.20 00:00:00</td>
+											<td><a class="thumNail" href="javascript:void(0);"><img src="https://dummyimage.com/60x60/000/fff" alt="이미지 미리보기" /></a></td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td class="check_info first">
+												<span>
+													<input id="chk_4" type="checkbox" name="chk[04]" value="">
+													<label for="chk_4"></label>
+												</span>													
+											</td>
+											<td>6</td>
+											<td>홍길동</td>
+											<td>010-0000-0000</td>
+											<td>홍말순</td>
+											<td>모</td>
+											<td>010-1111-1111</td>
+											<td>20.07.20 00:00:00</td>
+											<td><a class="thumNail" href="javascript:void(0);"><img src="https://dummyimage.com/60x60/000/fff" alt="이미지 미리보기" /></a></td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td class="check_info first">
+												<span>
+													<input id="chk_5" type="checkbox" name="chk[05]" value="">
+													<label for="chk_5"></label>
+												</span>													
+											</td>
+											<td>5</td>
+											<td>홍길동</td>
+											<td>010-0000-0000</td>
+											<td>홍말순</td>
+											<td>모</td>
+											<td>010-1111-1111</td>
+											<td>20.07.20 00:00:00</td>
+											<td><a class="thumNail" href="javascript:void(0);"><img src="https://dummyimage.com/60x60/000/fff" alt="이미지 미리보기" /></a></td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td class="check_info first">
+												<span>
+													<input id="chk_6" type="checkbox" name="chk[06]" value="">
+													<label for="chk_6"></label>
+												</span>													
+											</td>
+											<td>4</td>
+											<td>홍길동</td>
+											<td>010-0000-0000</td>
+											<td>홍말순</td>
+											<td>모</td>
+											<td>010-1111-1111</td>
+											<td>20.07.20 00:00:00</td>
+											<td><a class="thumNail" href="javascript:void(0);"><img src="https://dummyimage.com/60x60/000/fff" alt="이미지 미리보기" /></a></td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td class="check_info first">
+												<span>
+													<input id="chk_7" type="checkbox" name="chk[07]" value="">
+													<label for="chk_7"></label>
+												</span>													
+											</td>
+											<td>3</td>
+											<td>홍길동</td>
+											<td>010-0000-0000</td>
+											<td>홍말순</td>
+											<td>모</td>
+											<td>010-1111-1111</td>
+											<td>20.07.20 00:00:00</td>
+											<td><a class="thumNail" href="javascript:void(0);"><img src="https://dummyimage.com/60x60/000/fff" alt="이미지 미리보기" /></a></td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td class="check_info first">
+												<span>
+													<input id="chk_8" type="checkbox" name="chk[08]" value="">
+													<label for="chk_8"></label>
+												</span>													
+											</td>
+											<td>2</td>
+											<td>홍길동</td>
+											<td>010-0000-0000</td>
+											<td>홍말순</td>
+											<td>모</td>
+											<td>010-1111-1111</td>
+											<td>20.07.20 00:00:00</td>
+											<td><a class="thumNail" href="javascript:void(0);"><img src="https://dummyimage.com/60x60/000/fff" alt="이미지 미리보기" /></a></td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td class="check_info first">
+												<span>
+													<input id="chk_9" type="checkbox" name="chk[09]" value="">
+													<label for="chk_9"></label>
+												</span>													
+											</td>
+											<td>1</td>
+											<td>홍길동</td>
+											<td>010-0000-0000</td>
+											<td>홍말순</td>
+											<td>모</td>
+											<td>010-1111-1111</td>
+											<td>20.07.20 00:00:00</td>
+											<td><a class="thumNail" href="javascript:void(0);"><img src="https://dummyimage.com/60x60/000/fff" alt="이미지 미리보기" /></a></td>
+											<td>N</td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!--table_type01-->
+						</form>
+					</div>
+					<div class="paging">
+						<span class="first"><a href="#"><img src="img/common/bg_first.png" alt="처음"></a></span>
+						<span class="prev"><a href="#"><img src="img/common/bg_prev.png" alt="이전"></a></span>
+						<ul>
+							<li><a href="#" class="selected">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li><a href="#">8</a></li>
+							<li><a href="#">9</a></li>
+							<li><a href="#">100</a></li>
+						</ul>
+						<span class="next"><a href=""><img src="img/common/bg_nxt.png" alt="다음"></a></span>
+						<span class="end"><a href=""><img src="img/common/bg_end.png" alt="끝"></a></span>
+					</div>
+					<div class="layerPop">
+						<span class="btn_close"><a href="javascript:void(0);"><img src="../img/common/btn_close.png" alt="닫기" /><em class="hideEl">레이어 팝업 닫기</em></a></span>
+						<div class="img"><img src="https://dummyimage.com/600x600/fff/000" alt="확대 이미지" /></div>
+						<div class="desc">사진 설명 사진 설명 사진 설명 사진 설명 사진 설명 사진 설명 사진 설명 사진 설명 사진 설명 사진 설명 사진 설명 사진 설명 사진 설명 사진 설명</div>
+					</div>
+					<div class="bg_dark"></div>
+				</div>
+			</div>		
+		</div>
+
+		<script>
+			$(function(){
+				//리셋 체크 박스
+				var checked = $('.check_info > span input[type="checkbox"]');
+
+				checked.each(function(){
+					$(this).prop('checked',false);
+				});
+
+				expandThumnail();
+			});
+
+			function checkedOn(t,type){ // 전체선택
+				if($(t).prop('checked') == true){
+					if(type == 'All'){
+						$('.check_info').find('input[type=checkbox]').prop('checked',true);
+					}
+				}else {
+					$('.check_info').find('input[type=checkbox]').prop('checked',false);
+				}
+			}
+
+			function expandThumnail(){ // 이미지 확대 레이어 팝업
+				var thumNail = $('.board_list .thumNail'),
+				bgDark = $('.bg_dark'),
+				l_pop = $('.layerPop'),
+				btnClose = $('.layerPop .btn_close a');
+
+				thumNail.on('click',function(){
+					var target = $(this),
+					currentImg = target.find('img').attr('src');
+
+					l_pop.fadeIn(300);
+					bgDark.fadeIn(300);
+				});
+
+				bgDark.on('click',function(){
+					l_pop.fadeOut(300);
+					bgDark.fadeOut(300);
+				});
+
+				btnClose.on('click',function(){
+					l_pop.fadeOut(300);
+					bgDark.fadeOut(300);
+				});
+			}
+		</script>
+	</body>
+</html>	
+	  	
